@@ -1,4 +1,4 @@
-$primary-color: #174711;
+$primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
@@ -29,6 +29,16 @@ $success-color: #0a3477;
     }
     }
 
+  }
+}
+
+// set text $primary-color
+
+@function set-text-color($color){
+  @if (lightness($color) > 40){
+    @return #000;
+  }@else{
+    @return #fff;
   }
 }
 
